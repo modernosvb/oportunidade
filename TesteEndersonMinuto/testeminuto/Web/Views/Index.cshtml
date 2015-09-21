@@ -1,0 +1,25 @@
+﻿@{
+    PageData["title"] = "Teste Minuto - Enderson Geraldine Torrano";
+}
+<h2>Resultado - Dez últimos Tópicos do Blog</h2>
+<div ng-repeat="obj in objs">
+    Tópico {{$index + 1}}:
+    <br />Quantidade de Palavras: {{obj.QtdePalavras}}
+    <br />Top 10 Palavras:
+    <ul>
+        <li ng-repeat="palavra in obj.Top10Palavras">Palavra: {{palavra.item}} | Quantidade: {{palavra.valor}}</li>
+    </ul>
+    <div style="padding:5px; background:#f0f0f0;">
+        title: {{obj.Item.title}}
+        <br />link: {{obj.Item.link}}
+        <br />comments: {{obj.Item.comments}}
+        <br />pubDate: {{obj.Item.pubDate}}
+        <br />creator: {{obj.Item.creator}}
+        <br />category: {{obj.Item.category}}
+        <br />guid: {{obj.Item.guid}}
+        <br />description: {{obj.Item.description}}
+        <br />content: {{obj.Item.content}}
+        <br />slash: {{obj.Item.slash}}
+    </div>
+    <hr />
+</div>
